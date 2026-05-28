@@ -2,88 +2,28 @@ import React from 'react';
 import bg from '../assets/search.png';
 import home from '../assets/home.png';
 import account from '../assets/account.png';
+import logout from '../assets/logout.png';
 
 export default function Navbar() {
     return (
         <div className='flex h-screen bg-[#020f2f] fixed'>
 
+      {/* aside bagian satu */}
+      
+      
 
-  {/* <aside className='w-20 flex items-center justify-center border-r-2  border-gray-600/50 relative shrink-0
-  '>
 
-    <nav>
-        
-      <ul className='flex flex-col gap-6 w-full items-center'>
-
-        <li className='flex items-center group cursor-pointer gap-3
-
-    w-12
-    hover:w-40
-
-    overflow-hidden
-
-    rounded-xl
-
-    duration-300'>
-          <img
-            src={bg} alt="" className='
-            
-            w-8 opacity-60 
-            hover:opacity-100 hover:scale-110 duration-200 cursor-pointer
-            
-            '/>
-
-            <span className='
-            
-      text-white
-      whitespace-nowrap
-
-      opacity-0
-      group-hover:opacity-100
-
-      duration-200'> Search </span>
-
-        </li>
-
-        <li className='flex items-center group cursor-pointer'>
-          <img
-            src={home} alt="" className='w-8 opacity-60 hover:opacity-100 hover:scale-110 duration-200 cursor-pointer'/>
-        
-        <span className='absolute
-      left-15
-
-      w-0
-      overflow-hidden
-
-      group-hover:w-28
-
-      whitespace-nowrap
-
-      bg-white/10
-      rounded-xl
-
-      text-white
-
-      px-0
-      group-hover:px-3
-
-      py-2
-
-      duration-300'> Home</span>
-        </li>
-
-      </ul>
-    </nav>
-
-  </aside> */}
+  {/* aside bagian dua*/}
   
   <aside
   className='
+    group
+
     w-20
     hover:w-35
 
     flex
-    items-center
+    flex-col
 
     border-r-2
     border-gray-600/50
@@ -92,17 +32,22 @@ export default function Navbar() {
     shrink-0
 
     duration-300
-    
     overflow-hidden
-
-  '
+    
+    '
 >
+        <h1 className='mt-3 text-base text-white flex justify-center whitespace-nowrap hover:cursor-default group-hover:text-2xl duration-300 transition-all'>Socialy</h1>
 
-  <nav className='w-full'>
+  <nav className='flex-1 flex items-center'>
 
-    <ul className='flex flex-col gap-3 py-6 px-4'>
 
-        
+    
+      
+
+
+
+    <ul className='flex flex-col gap-3 py-6 px-4 w-full'>
+
 
       {/* SEARCH */}
       <li
@@ -113,7 +58,7 @@ export default function Navbar() {
           cursor-pointer
 
           rounded-xl
-
+          gap-3
           p-2
 
           hover:bg-white/10
@@ -134,7 +79,7 @@ export default function Navbar() {
             opacity-60
 
             hover:opacity-100
-            
+            hover:scale-105
 
             duration-200
 
@@ -220,6 +165,58 @@ export default function Navbar() {
 
   </nav>
 
+  <figure
+  className='
+    
+
+    flex
+    items-center
+
+    px-6
+    h-20
+    w-full
+
+    cursor-pointer
+    hover:bg-white/10
+
+    duration-300
+  '
+>
+
+  <img
+    src={logout}
+    alt=""
+    className='
+      w-8
+      h-8
+      shrink-0
+      opacity-60
+      
+      hover:opacity-100
+      hover:scale-105
+
+      duration-200
+    '
+  />
+
+  <span
+    className='
+    
+    ml-3
+
+      text-white
+      whitespace-nowrap
+
+      opacity-0
+      group-hover:opacity-100
+
+      duration-200
+    '
+  >
+    Logout
+  </span>
+
+</figure>
 </aside>
 
 </div>
