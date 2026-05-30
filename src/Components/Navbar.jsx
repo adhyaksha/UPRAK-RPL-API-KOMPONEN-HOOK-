@@ -3,8 +3,11 @@ import bg from '../assets/search.png';
 import home from '../assets/home.png';
 import account from '../assets/account.png';
 import logout from '../assets/logout.png';
+import { useNavigate } from 'react-router-dom';
 
 export default function Navbar() {
+    const navigate = useNavigate()
+
     return (
         <div className='flex h-screen bg-[#020f2f] fixed'>
 
@@ -171,12 +174,18 @@ export default function Navbar() {
 
     flex
     items-center
+    
 
-    px-6
-    h-20
-    w-full
+    p-2
+
+    mx-4
+    mb-4
+
+    rounded-xl
 
     cursor-pointer
+    group
+
     hover:bg-white/10
 
     duration-300
@@ -197,6 +206,8 @@ export default function Navbar() {
 
       duration-200
     '
+
+    onClick={() => navigate ('/LoginPages')}
   />
 
   <span
